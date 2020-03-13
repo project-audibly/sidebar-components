@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+
 mongoose.connect('mongodb://localhost/sidebarcomponent', {useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
