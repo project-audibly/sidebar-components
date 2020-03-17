@@ -3,6 +3,7 @@ const { relatedSongSchema, relatedPlaylistSchema, songSchema } = require('../db/
 const faker = require('faker');
 const db = require('./index.js');
 
+const Song = mongoose.model('Song', songSchema);
 
 const generateRelatedSongs = function () {
     let relatedSongs = [];
@@ -72,18 +73,18 @@ const generateSongs = function () {
         const likes = faker.random.number();
         const reposts = faker.random.number();
         
-        let song = {
+        let song = new Song({
             title: title,
             likes: likes,
             reposts: reposts,
             related_songs: generateRelatedSongs(),
             related_playlists: generateRelatedPlaylists()
-        }    
+        })    
         songs.push(song);
     }
     return songs; 
 };
 
-const Song = mongoose.model('Song', songSchema);
+Song.collection.insertMany(generateSongs());
 
-db.collection('Song').insertMany(generateSongs());
+module.exports = Song; 
