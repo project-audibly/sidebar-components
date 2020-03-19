@@ -10,12 +10,22 @@ class App extends React.Component {
             mainSongLikes: 0,
             mainSongReposts: 0,
             relatedSongs: [],
-            relatedPlaylist: []
+            relatedPlaylist: [],
+            isHovering: false
         };
-
+        this.handleMouseOver = this.handleMouseOver.bind(this)
         this.getMainSong = this.getMainSong.bind(this);
-    }
+    };
 
+    handleMouseOver() {
+        this.setState(this.toggleHoverState)
+    };
+
+    toggleHoverState(state) {
+        return {
+            isHovering: !state.isHovering
+        }
+    };
 
     getMainSong() {
         return axios.get('/api/mainSong')
@@ -32,11 +42,11 @@ class App extends React.Component {
             .catch((err) => {
                 console.log('get err so many errs on client side ', err);
             })
-    }
+    };
     
     componentDidMount() {
         this.getMainSong();
-    }
+    };
     
     render() {
         return (
@@ -44,7 +54,7 @@ class App extends React.Component {
             <div>TESTING REACT</div> 
             <div><RelatedSongsList relatedSongs={this.state.relatedSongs} /></div>
         </div >
-    )}
+    )};
 
 }
 
