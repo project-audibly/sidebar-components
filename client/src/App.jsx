@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-class App extends React.Component { 
+class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,36 +15,38 @@ class App extends React.Component {
         this.getMainSong = this.getMainSong.bind(this);
     }
 
-    
-    getMainSong () {
-        axios.get('/api/mainSong')
-        .then( (res) => {
-            console.log('RES DATA FROM GET ALL SONGS GET REQUEST FROM CLIENT SIDE ', res.data);
-            this.setState({ mainSong: res.data[0] })
-            this.setState({ mainSongLikes: res.data[0].likes })
-            this.setState({ mainSongReposts: res.data[0].reposts })
-            this.setState({ relatedSongs: res.data[0].related_songs })
-            this.setState({ relatedPlaylist: res.data[0].related_playlists })
-        })
-        .catch( (err) => {
-            console.log('get err so many errs on client side ', err);
-        })
+
+    getMainSong() {
+        return axios.get('/api/mainSong')
+            .then(res => {
+                console.log('RES DATA FROM GET ALL SONGS GET REQUEST FROM CLIENT SIDE ', res.data);
+                this.setState({
+                    mainSong: res.data[0],
+                    mainSongLikes: res.data[0].likes,
+                    mainSongReposts: res.data[0].reposts,
+                    relatedSongs: res.data[0].related_songs,
+                    relatedPlaylist: res.data[0].related_playlists
+                })
+            })
+            .catch((err) => {
+                console.log('get err so many errs on client side ', err);
+            })
     }
     
-    componentDidMount () {
+    componentDidMount() {
         this.getMainSong();
     }
     
     render() {
         return (
         <div>
-            <div>TESTING REACT</div>
-        </div>
-        )
-    }
+            <div>TESTING REACT</div> 
+        </div >
+    )}
+
 }
 
-export default App; 
+export default App;
 
 
 // getTest () {
