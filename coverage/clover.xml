@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1584641439161" clover="3.2.0">
-  <project timestamp="1584641439161" name="All files">
-    <metrics statements="13" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="4" elements="23" coveredelements="10" complexity="0" loc="13" ncloc="13" packages="1" files="3" classes="3"/>
+<coverage generated="1584643410109" clover="3.2.0">
+  <project timestamp="1584643410110" name="All files">
+    <metrics statements="13" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="7" elements="23" coveredelements="16" complexity="0" loc="13" ncloc="13" packages="1" files="3" classes="3"/>
     <file name="App.jsx" path="/Users/ohjeezz/Documents/Hack Reactor/sidebar-components-services/client/src/App.jsx">
       <metrics statements="9" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
-      <line num="7" count="2" type="stmt"/>
-      <line num="8" count="2" type="stmt"/>
-      <line num="16" count="2" type="stmt"/>
-      <line num="21" count="2" type="stmt"/>
+      <line num="7" count="3" type="stmt"/>
+      <line num="8" count="3" type="stmt"/>
+      <line num="16" count="3" type="stmt"/>
+      <line num="21" count="3" type="stmt"/>
       <line num="23" count="0" type="stmt"/>
       <line num="24" count="0" type="stmt"/>
       <line num="33" count="0" type="stmt"/>
-      <line num="38" count="3" type="stmt"/>
-      <line num="42" count="3" type="stmt"/>
+      <line num="38" count="4" type="stmt"/>
+      <line num="42" count="4" type="stmt"/>
     </file>
     <file name="RelatedSong.jsx" path="/Users/ohjeezz/Documents/Hack Reactor/sidebar-components-services/client/src/RelatedSong.jsx">
-      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <line num="5" count="0" type="stmt"/>
-      <line num="9" count="0" type="stmt"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
     </file>
     <file name="RelatedSongsList.jsx" path="/Users/ohjeezz/Documents/Hack Reactor/sidebar-components-services/client/src/RelatedSongsList.jsx">
-      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <line num="5" count="0" type="stmt"/>
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <line num="5" count="1" type="stmt"/>
       <line num="8" count="0" type="stmt"/>
     </file>
   </project>
