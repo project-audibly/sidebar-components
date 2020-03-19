@@ -1,30 +1,58 @@
-  .tooltip {
+body {
+    vertical-align: middle;
+}
+
+.tooltip {
     position: relative;
-  }
-  
-  .tooltip-bubble {
+}
+
+.tooltip-bubble {
     min-width: 120px;
     max-width: 210px;
     position: absolute;
     z-index: 10;
-    &::after {
-      content: '';
-      position: absolute;
+    after {
+        content: '';
+        position: absolute;
     }
-  }
-  
-  .tooltip-bottom {
+}
+
+.tooltip-bottom {
     top: 100%;
     left: 50%;
     padding-top: 9px;
     transform: translateX(-50%);
-    
-    &::after {
-      border-left: 9px solid transparent;
-      border-right: 9px solid transparent;
-      border-bottom: 9px solid $tooltip-color;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
+    after {
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        border-bottom: 9px solid $tooltip-color;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
-  }
+}
+
+.info-image {
+    float:left; 
+    height:60px;
+    width:60px;	
+    padding: 0 5px 10px 10px;
+    position: absolute; 
+}
+
+.songContainer {
+	width:auto;
+	height:auto;
+    padding:1%;
+}
+
+.info-songName, .info-artistName, .statistics {
+    width: 300px; 
+    margin-left: 80px;
+    vertical-align: middle;
+}
+
+.statistics {
+    padding-right: 5px;
+    display: inline;
+}

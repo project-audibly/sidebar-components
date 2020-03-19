@@ -40,7 +40,7 @@ class App extends React.Component {
     
     render() {
         return (
-        <div>
+        <div className="content">
         <div>
             <p><ArtistTooltip contents={<RelatedSongsList relatedSongs={this.state.relatedSongs} />} position={'bottom'}>Artist Name Test</ArtistTooltip></p>
         </div>            
