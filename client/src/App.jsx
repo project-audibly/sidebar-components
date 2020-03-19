@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import RelatedSongsList from './RelatedSongsList.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -41,6 +42,7 @@ class App extends React.Component {
         return (
         <div>
             <div>TESTING REACT</div> 
+            <div><RelatedSongsList relatedSongs={this.state.relatedSongs} /></div>
         </div >
     )}
 
