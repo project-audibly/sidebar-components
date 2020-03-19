@@ -4,6 +4,11 @@ import axios from 'axios';
 import App from '../client/src/App.jsx';
 
 describe('App Unit Tests', () => {
+    test('should render the app component', () => {
+        const wrapper = shallow(<App />);
+        expect(wrapper).toExist();
+    });
+
     jest.mock('axios', () => {
         const song = [{
             "title": "ea at et",
@@ -78,11 +83,6 @@ describe('App Unit Tests', () => {
             get: jest.fn(() => Promise.resolve(song)),
         };
     })
-
-    test('should render the app component on screen', () => {
-        const wrapper = shallow(<App />);
-        expect(wrapper).toExist();
-    });
 
     test('should invoke getMainSong on componentDidMount', () => {
         const wrapper = shallow(<App />);
