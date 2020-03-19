@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import RelatedSongsList from './RelatedSongsList.jsx';
+import ArtistTooltip from './ArtistTooltip.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -10,22 +11,11 @@ class App extends React.Component {
             mainSongLikes: 0,
             mainSongReposts: 0,
             relatedSongs: [],
-            relatedPlaylist: [],
-            isHovering: false
+            relatedPlaylist: []
         };
-        this.handleMouseOver = this.handleMouseOver.bind(this)
+
         this.getMainSong = this.getMainSong.bind(this);
-    };
-
-    handleMouseOver() {
-        this.setState(this.toggleHoverState)
-    };
-
-    toggleHoverState(state) {
-        return {
-            isHovering: !state.isHovering
-        }
-    };
+    }
 
     getMainSong() {
         return axios.get('/api/mainSong')
@@ -42,19 +32,22 @@ class App extends React.Component {
             .catch((err) => {
                 console.log('get err so many errs on client side ', err);
             })
-    };
+    }
     
     componentDidMount() {
         this.getMainSong();
-    };
+    }
     
     render() {
         return (
         <div>
-            <div>TESTING REACT</div> 
-            <div><RelatedSongsList relatedSongs={this.state.relatedSongs} /></div>
+        <div>
+            <p><ArtistTooltip contents={<RelatedSongsList relatedSongs={this.state.relatedSongs} />} position={'bottom'}>Artist Name Test</ArtistTooltip></p>
+        </div>            
+        
+        <span><RelatedSongsList relatedSongs={this.state.relatedSongs} /></span>
         </div >
-    )};
+    )}
 
 }
 
