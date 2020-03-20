@@ -1,3 +1,9 @@
+body {
+    font-family: Interstate, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Garuda, Verdana, Tahoma, sans-serif;
+    font-size: 14px; 
+    color: #333333;
+}
+
 .tooltip {
     position: relative;
 }
@@ -10,7 +16,7 @@
     background-color: white;
     color: black;
     text-align: center;
-    padding: 5px 0;
+    padding: 30px 10px;
     border-radius: 6px;
     border: solid 1px #ccc;
 }
@@ -35,6 +41,7 @@
 }
 
 .tooltip-image {
+    padding: 15px;
     height: 70px;
     width: 70px;
     border-radius: 50%;
@@ -42,6 +49,7 @@
 
 .tooltip-name, .tooltip-followers, .tooltip-location {
     display: block;
+    padding: 3px;
 }
 
 .tooltip-followers {
@@ -49,26 +57,46 @@
 }
 
 .info-image {
-    float:left; 
-    height:60px;
-    width:60px;	
-    padding: 0 5px 10px 10px;
+    height:50px;
+    width:50px;	
+    padding: 5px 6px;
+    margin-right: 4px;
     position: absolute; 
+    text-align: left;
+    float: left;
 }
 
 .songContainer {
-	width:auto;
-	height:auto;
-    padding:1%;
+	width: 306px;
+	height: 62px;
+    margin-right: 6px;
+    padding: 5px;
 }
 
-.info-songName, .info-artistName, .statistics {
-    width: 300px; 
-    margin-left: 80px;
-    vertical-align: middle;
+.info-artistName {
+    width: 235px;
+    height: 18px;
+    line-height: 18.2px;
+    text-align: left;
+    margin-left: 70px;
+    color: #999999;
 }
+
+.info-songName {
+    width: 235px;
+    height: 18px;
+    line-height: 18.2px;
+    text-align: left;
+    margin-left: 70px;
+} 
 
 .statistics {
+    width: 59px; 
+    height: 22px;
+    font-size: 12px; 
+    line-height: 16.8px;
+    text-align: left;
     padding-right: 5px;
-    display: inline;
+    margin-left: 70px;
+    color: #999999;
 }

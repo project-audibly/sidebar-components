@@ -22,10 +22,10 @@ class RelatedSong extends React.Component {
                             {artistName}
                         </ArtistTooltip>
                     </div>
-                    <div className="statistics">{this.props.relatedSong.song_plays}</div>
-                    <div className="statistics">{this.props.relatedSong.song_likes}</div>
-                    <div className="statistics">{this.props.relatedSong.song_reposts}</div>
-                    <div className="statistics">{this.props.relatedSong.song_reposts}</div>
+                    <span className="statistics">{this.props.relatedSong.song_plays}</span>
+                    <span className="statistics">{this.props.relatedSong.song_likes}</span>
+                    <span className="statistics">{this.props.relatedSong.song_reposts}</span>
+                    <span className="statistics">{this.props.relatedSong.song_reposts}</span>
                 </div>
             </div>
         )
