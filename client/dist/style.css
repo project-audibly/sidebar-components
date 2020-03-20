@@ -47,13 +47,24 @@ body {
     border-radius: 50%;
 }
 
-.tooltip-name, .tooltip-followers, .tooltip-location {
-    display: block;
+.tooltip-name {
     padding: 3px;
 }
 
 .tooltip-followers {
-    font-size: small;
+    font-size: 12px; 
+    line-height: 16.8px;
+    text-align: center;
+    color: #999999;
+    padding: 3px;
+} 
+
+.tooltip-location {
+    color: #999999;
+    padding: 3px;
+    font-size: 12px; 
+    line-height: 16.8px;
+    text-align: center;
 }
 
 .info-image {
