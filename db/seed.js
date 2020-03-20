@@ -18,7 +18,7 @@ const generateRelatedSongs = function () {
         const songPlays = faker.random.number();
         const songComments = faker.random.number();
         const artistImage = faker.image.avatar();
-        const songImage = faker.image.avatar();
+        const songImage = faker.image.image();
 
         let relatedSong = {
             song_name: songName,
@@ -48,7 +48,7 @@ const generateRelatedPlaylists = function () {
         const userName = faker.lorem.words();
         const userLocation = faker.address.city();
         const userFollowers = faker.random.number();
-        const playlistImage = faker.image.avatar();
+        const playlistImage = faker.image.image();
         const userImage = faker.image.avatar();
 
         let relatedPlaylist = {
