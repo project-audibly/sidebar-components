@@ -9,20 +9,26 @@ const Song = require('../db/seed.js');
 app.use(express.static('/Users/ohjeezz/Documents/Hack Reactor/sidebar-components-services/client/dist'));
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/api/mainSong', (req, res) => {
-    Song
-    .find( {} )
-    .sort( { likes: -1 })
-    .limit(1)
-    .then( (data) => {
-            res.json(data);
+  Song
+    .find({})
+    .count()
+    .exec((err, count) => {
+      const random = Math.floor(Math.random() * count);
+      Song
+        .findOne()
+        .skip(random)
+        .limit(1)
+        .then((data) => {
+          res.json(data);
         })
-    .catch( (err) => {
-        if (err) {
+        .catch((err) => {
+          if (err) {
             res.sendStatus(404).send('THIS IS A CONTROLLER GET ERROR FOR ALL SONGS ', err);
-        }
+          }
+        })
     })
 });
 
