@@ -12,6 +12,7 @@ const generateRelatedSongs = function () {
         const songName = faker.lorem.words(); 
         const artistName = faker.name.firstName();
         const artistLocation = faker.address.city();
+        const artistFollowers = faker.random.number();
         const songLikes = faker.random.number();
         const songReposts = faker.random.number();
         const songPlays = faker.random.number();
@@ -23,6 +24,7 @@ const generateRelatedSongs = function () {
             song_name: songName,
             artist_name: artistName,
             artist_location: artistLocation,
+            artist_followers: artistFollowers,
             song_likes: songLikes,
             song_reposts: songReposts,
             song_plays: songPlays,
