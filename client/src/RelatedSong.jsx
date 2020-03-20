@@ -9,15 +9,17 @@ class RelatedSong extends React.Component {
     render() {
         let artistImage = this.props.relatedSong.artist_image_url;
         let artistName = this.props.relatedSong.artist_name;
-        let artistLikes = this.props.relatedSong.artist_
+        let artistFollowers = this.props.relatedSong.artist_followers;
+        let artistLocation = this.props.relatedSong.artist_location;
+
         return (
             <div>
                 <div className="songContainer">
                     <img src={this.props.relatedSong.song_image_url} className="info-image"/>
                     <div className="info-songName">{this.props.relatedSong.song_name}</div>
                     <div className="info-artistName">
-                        <ArtistTooltip contents={'test'} position={'bottom'}>
-                            {this.props.relatedSong.artist_name}
+                        <ArtistTooltip image={artistImage} name={artistName} location={artistLocation} followers={artistFollowers}>
+                            {artistName}
                         </ArtistTooltip>
                     </div>
                     <div className="statistics">{this.props.relatedSong.song_plays}</div>

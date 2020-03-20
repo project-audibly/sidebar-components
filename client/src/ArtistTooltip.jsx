@@ -25,8 +25,15 @@ class ArtistTooltip extends React.Component {
             onMouseLeave={this.handleMouseExit}
           >
           {this.state.isVisible &&
-          <span className={`tooltip-bubble tooltip-${this.props.position}`}>
-            <span className='tooltip-message'>{this.props.contents}</span>
+          <span className={`tooltip-bubble tooltip-bottom`}>
+            <span className='tooltip-message'>
+                <div>
+                    <img src={this.props.image}></img>
+                    <div>{this.props.name}</div>
+                    <div>{this.props.followers}</div>
+                    <div>{this.props.location}</div>
+                </div>
+            </span>
           </span>
           }
           <span onMouseOver={this.handleMouseOver}>
