@@ -41,6 +41,7 @@ const relatedSongSchema = new mongoose.Schema({
     song_name: String,
     artist_name: String,
     artist_location: String,
+    artist_followers: Number,
     song_likes: Number,
     song_reposts: Number,
     song_plays: Number,
