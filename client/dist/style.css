@@ -32,14 +32,6 @@
     left: 50%;
     padding-top: 9px;
     transform: translateX(-50%);
-    ::after {
-        border-left: 9px solid transparent;
-        border-right: 9px solid transparent;
-        border-bottom: 9px solid $tooltip-color;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
 }
 
 .tooltip-image {
