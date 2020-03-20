@@ -1,7 +1,3 @@
-body {
-    vertical-align: middle;
-}
-
 .tooltip {
     position: relative;
 }
@@ -11,10 +7,24 @@ body {
     max-width: 210px;
     position: absolute;
     z-index: 10;
-    after {
-        content: '';
-        position: absolute;
-    }
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    border: solid 1px #ccc;
+}
+
+.tooltip-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #ccc transparent;
+    /* border: solid 1px #ccc; */
 }
 
 .tooltip-bottom {
@@ -22,7 +32,7 @@ body {
     left: 50%;
     padding-top: 9px;
     transform: translateX(-50%);
-    after {
+    ::after {
         border-left: 9px solid transparent;
         border-right: 9px solid transparent;
         border-bottom: 9px solid $tooltip-color;
@@ -30,6 +40,20 @@ body {
         left: 50%;
         transform: translateX(-50%);
     }
+}
+
+.tooltip-image {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.tooltip-name, .tooltip-followers, .tooltip-location {
+    display: block;
+}
+
+.tooltip-followers {
+    font-size: small;
 }
 
 .info-image {

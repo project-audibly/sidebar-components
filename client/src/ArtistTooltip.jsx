@@ -28,10 +28,10 @@ class ArtistTooltip extends React.Component {
           <span className={`tooltip-bubble tooltip-bottom`}>
             <span className='tooltip-message'>
                 <div>
-                    <img src={this.props.image}></img>
-                    <div>{this.props.name}</div>
-                    <div>{this.props.followers}</div>
-                    <div>{this.props.location}</div>
+                    <img src={this.props.image} className="tooltip-image"></img>
+                    <div className='tooltip-name'>{this.props.name}</div>
+                    <div className='tooltip-followers'>{this.props.followers}</div>
+                    <div className='tooltip-location'>{this.props.location}</div>
                 </div>
             </span>
           </span>
