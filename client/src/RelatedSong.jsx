@@ -16,12 +16,12 @@ class RelatedSong extends React.Component {
             <div>
                 <div className="songContainer">
                     <img src={this.props.relatedSong.song_image_url} className="info-image"/>
-                    <div className="info-songName">{this.props.relatedSong.song_name}</div>
                     <div className="info-artistName">
                         <ArtistTooltip image={artistImage} name={artistName} location={artistLocation} followers={artistFollowers}>
                             {artistName}
                         </ArtistTooltip>
                     </div>
+                    <div className="info-songName">{this.props.relatedSong.song_name}</div>
                     <span className="statistics">{this.props.relatedSong.song_plays}</span>
                     <span className="statistics">{this.props.relatedSong.song_likes}</span>
                     <span className="statistics">{this.props.relatedSong.song_reposts}</span>

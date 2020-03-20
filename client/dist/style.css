@@ -82,6 +82,9 @@ body {
     color: #999999;
 }
 
+.info-artistName:hover {
+    color: #333333;
+}
 .info-songName {
     width: 235px;
     height: 18px;
