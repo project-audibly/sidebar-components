@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ArtistTooltip extends React.Component {
+class Tooltip extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -21,18 +21,15 @@ class ArtistTooltip extends React.Component {
 
   render() {
     return (
-      <span className='tooltip'
-        onMouseLeave={this.handleMouseExit}>
+      <span className='tooltip' onMouseLeave={this.handleMouseExit}>
         {this.state.isVisible &&
           <span className={`tooltip-bubble tooltip-bottom`}>
-            <span>
               <div>
                 <img src={this.props.image} className="tooltip-image"></img>
                 <div className='tooltip-name'>{this.props.name}</div>
                 <div className='tooltip-followers'>{this.props.followers}</div>
                 <div className='tooltip-location'>{this.props.location}</div>
               </div>
-            </span>
           </span>
         }
         <span onMouseOver={this.handleMouseOver}>
@@ -43,4 +40,4 @@ class ArtistTooltip extends React.Component {
   }
 }
 
-export default ArtistTooltip;
+export default Tooltip;

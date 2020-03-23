@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import RelatedSongsList from './RelatedSongsList.jsx';
-import ArtistTooltip from './ArtistTooltip.jsx';
+import RelatedPlaylistsList from './RelatedPlaylistsList.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class App extends React.Component {
       mainSongLikes: 0,
       mainSongReposts: 0,
       relatedSongs: [],
-      relatedPlaylist: []
+      relatedPlaylists: []
     };
 
     this.getMainSong = this.getMainSong.bind(this);
@@ -26,7 +26,7 @@ class App extends React.Component {
           mainSongLikes: res.data.likes,
           mainSongReposts: res.data.reposts,
           relatedSongs: res.data.related_songs,
-          relatedPlaylist: res.data.related_playlists
+          relatedPlaylists: res.data.related_playlists
         })
       })
       .catch((err) => {
@@ -40,8 +40,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="content">
-        <span><RelatedSongsList relatedSongs={this.state.relatedSongs} /></span>
+      <div>
+        <div className="content">
+          <RelatedSongsList relatedSongs={this.state.relatedSongs} />
+        </div>
+        <div><br></br></div>
+        <div className="content">
+          <RelatedPlaylistsList relatedPlaylists={this.state.relatedPlaylists} />
+        </div>
       </div>
     )
   }

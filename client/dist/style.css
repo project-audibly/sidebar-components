@@ -1,116 +1,160 @@
 body {
-    font-family: Interstate, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Garuda, Verdana, Tahoma, sans-serif;
-    font-size: 14px; 
-    color: #333333;
+  font-family: Interstate, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Garuda, Verdana, Tahoma, sans-serif;
+  font-size: 14px; 
+  color: #999999;
+
+}
+
+.header {
+  width: 300px;
+  height: 30px;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.flex {
+  display: flex;
+  flex-direction: space-between; 
+}
+
+.headerTitle {
+  width: 89px;
+  height: 24px;
+  line-height: 24px; 
+  text-align: start; 
+}
+
+.headerOption {
+  width: 48px;
+  height: 18px;
+  line-height: 18.2px;
+  text-align: start;
+}
+
+.content {
+  width: 300px;
+  height: 216px;
+  padding-top: 5px;
 }
 
 .tooltip {
-    position: relative;
+  position: relative;
 }
 
 .tooltip-bubble {
-    min-width: 120px;
-    max-width: 210px;
-    position: absolute;
-    z-index: 10;
-    background-color: white;
-    color: black;
-    text-align: center;
-    padding: 30px 10px;
-    border-radius: 6px;
-    border: solid 1px #ccc;
+  min-width: 120px;
+  max-width: 210px;
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 30px 10px;
+  border-radius: 6px;
+  border: solid 1px #ccc;
 }
 
 .tooltip-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent #ccc transparent;
-    /* border: solid 1px #ccc; */
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #ccc transparent;
+  /* border: solid 1px #ccc; */
 }
 
 .tooltip-bottom {
-    top: 100%;
-    left: 50%;
-    padding-top: 9px;
-    transform: translateX(-50%);
+  top: 100%;
+  left: 50%;
+  padding-top: 9px;
+  transform: translateX(-50%);
 }
 
 .tooltip-image {
-    padding: 15px;
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
+  padding: 15px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
 }
 
 .tooltip-name {
-    padding: 3px;
+  padding: 3px;
+  color: #333333;
 }
 
 .tooltip-followers {
-    font-size: 12px; 
-    line-height: 16.8px;
-    text-align: center;
-    color: #999999;
-    padding: 3px;
+  font-size: 12px; 
+  line-height: 16.8px;
+  text-align: center;
+  padding: 3px;
+  color: #999999;
 } 
 
 .tooltip-location {
-    color: #999999;
-    padding: 3px;
-    font-size: 12px; 
-    line-height: 16.8px;
-    text-align: center;
+  padding: 3px;
+  font-size: 12px; 
+  line-height: 16.8px;
+  text-align: center;
+  color: #999999;
 }
 
 .info-image {
-    height:50px;
-    width:50px;	
-    padding: 5px 6px;
-    margin-right: 4px;
-    position: absolute; 
-    text-align: left;
-    float: left;
+  height:50px;
+  width:50px;	
+  padding: 5px 6px;
+  margin-right: 4px;
+  position: absolute; 
+  text-align: left;
+  float: left;
 }
 
-.songContainer {
-	width: 306px;
-	height: 62px;
-    margin-right: 6px;
-    padding: 5px;
+.listContainer {
+width: 306px;
+height: 62px;
+  margin-right: 6px;
+  padding: 5px;
 }
 
-.info-artistName {
-    width: 235px;
-    height: 18px;
-    line-height: 18.2px;
-    text-align: left;
-    margin-left: 70px;
-    color: #999999;
+.info-name {
+  width: 235px;
+  height: 18px;
+  line-height: 18.2px;
+  text-align: left;
+  margin-left: 70px;
 }
 
-.info-artistName:hover {
-    color: #333333;
+.info-name:hover {
+  color: #333333;
 }
 .info-songName {
-    width: 235px;
-    height: 18px;
-    line-height: 18.2px;
-    text-align: left;
-    margin-left: 70px;
+  width: 235px;
+  height: 18px;
+  line-height: 18.2px;
+  text-align: left;
+  margin-left: 70px;
+  color: #333333;
 } 
 
 .statistics {
-    width: 59px; 
-    height: 22px;
-    font-size: 12px; 
-    line-height: 16.8px;
-    text-align: left;
-    padding-right: 5px;
-    margin-left: 70px;
-    color: #999999;
+  width: 59px; 
+  height: 22px;
+  font-size: 12px; 
+  line-height: 16.8px;
+  text-align: left;
+  padding-right: 5px;
+  margin-left: 70px;
+}
+
+.hover-overlay {
+  width: 306px;
+  height: 62px; 
+  position: absolute;
+  background-color: transparent;
+  color: black;
+  text-align: center;
+  padding: 30px 10px;
+  border-radius: 6px;
 }
