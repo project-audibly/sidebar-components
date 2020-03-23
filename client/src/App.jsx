@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import RelatedSongsList from './RelatedSongsList.jsx';
-import ArtistTooltip from './ArtistTooltip.jsx';
+import RelatedPlaylistsList from './RelatedPlaylistsList.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -40,8 +40,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="content">
-        <span><RelatedSongsList relatedSongs={this.state.relatedSongs} /></span>
+      <div>
+
+        <div className="content">
+          <RelatedSongsList relatedSongs={this.state.relatedSongs} />
+        </div>
+        <div className="content">
+          <RelatedPlaylistsList relatedPlaylists={this.state.relatedPlaylists} />
+        </div>
+
       </div>
     )
   }
