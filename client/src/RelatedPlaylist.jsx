@@ -19,22 +19,28 @@ class RelatedPlaylist extends React.Component {
     let userImage = this.props.relatedPlaylist.user_image_url;
 
     return (
-       <div className="listContainer">
-          <img src={playlistImage} className="info-image" />
+        <div className="listItem">
+          <div className="listImage">
+            <img src={playlistImage} className="info-image" />
+          </div>
           <div className="info-name">
             <Tooltip image={userImage} name={username} location={userLocation} followers={userFollowers}>
               {username}
             </Tooltip>
           </div>
           <div className="info-songName">{playlistName}</div>
-          <div className="statisticHolder">
-            <img className="icon" src={heart} />
-            {playlistLikes}
-          </div>
+
           <div className="statistics">
-            <img className="icon" src={repost} />
-            {playlistReposts}
+            <div className="statistics-withImage">
+              <img className="icon" src={heart} />
+              <div className="stats">{playlistLikes}</div>
+            </div>
+            <div className="statistics-withImage">
+              <img className="icon" src={repost} />
+              <div className="stats">{playlistReposts}</div>
+            </div>
           </div>
+
         </div>
     )
   }

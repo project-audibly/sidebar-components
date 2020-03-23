@@ -51,7 +51,7 @@ class App extends React.Component {
           <RelatedSongsList relatedSongs={this.state.relatedSongs} />
         </div>
         <div><br></br></div>
-        <div className="content">
+        <div>
           <RelatedPlaylistsList relatedPlaylists={this.state.relatedPlaylists} />
         </div>
         <div><br></br></div>

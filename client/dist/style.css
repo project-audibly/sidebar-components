@@ -5,18 +5,6 @@ body {
 
 }
 
-.header {
-  width: 300px;
-  height: 30px;
-  justify-content: space-between;
-  align-items: space-between;
-}
-
-.flex {
-  display: flex;
-  flex-direction: space-between; 
-}
-
 .headerTitle {
   width: 89px;
   height: 24px;
@@ -101,29 +89,47 @@ body {
   color: #999999;
 }
 
-.info-image {
-  height:50px;
-  width:50px;	
-  padding: 5px 6px;
-  margin-right: 4px;
-  position: absolute; 
-  text-align: left;
-  float: left;
+.listContainer {
+  width: 300px;
+  height: 62px;
+  padding: 5px; 
 }
 
-.listContainer {
+.listItem {
   width: 306px;
   height: 62px;
   margin-right: 6px;
-  padding: 5px;
+  display: grid;
+  grid-template-columns: 80px auto;
+  grid-template-rows: 33% 33% 33.33%; 
+  grid-template-areas: "img artist"
+                       "img song"
+                       "img stats"
+}
+
+.listImage {
+  width: 50px;
+  height: 50px;
+  padding: 5px 6px;
+  margin-right: 4px;
+}
+
+.info-image {
+  height: 50px;
+  width: 50px;	
+  padding: 5px 6px;
+  margin-right: 4px;
+  grid-area: img;
 }
 
 .info-name {
-  width: 235px;
-  height: 18px;
-  line-height: 18.2px;
+  width: auto;
+  height: auto;
+  line-height: 14px;
   text-align: left;
-  margin-left: 70px;
+  grid-area: artist;
+  align-self: end;
+  padding-top: 5px;
 }
 
 .info-name:hover {
@@ -132,12 +138,13 @@ body {
 }
 
 .info-songName {
-  width: 235px;
+  width: auto;
   height: 18px;
   line-height: 18.2px;
   text-align: left;
-  margin-left: 70px;
   color: #333333;
+  grid-area: song;
+  align-self: end;
 } 
 
 .info-songName:hover {
@@ -145,28 +152,36 @@ body {
   cursor: pointer;
 }
 
-.statisticsFirst {
-  margin-left: 50px;
-  /* CHANGE MARGIN, FLEX BOX MAKE THESE THREE START + END SAME, IMAGE MIGHTN NEED TO CHANGE. OTHER = MARGIN-LEFT 70PX */
-}
-
-.statisticHolder{
-  margin-left: 70px; 
-}
-
-.statisticsFirst, .statistics, .statisticHolder {
-  width: 59px; 
+.statistics {
+  width: auto;
   height: 22px;
-  font-size: 12px; 
   line-height: 16.8px;
-  text-align: left;
-  padding-top: 5px;
-  padding-top: 5px;
-  padding-right: 5px;
-  display: inline-block;
+  font-size: 12px;
+  grid-area: stats;
+  align-self: end;
+  display: flex;
+  justify-content: flex-start;
 }
 
-.statistics:hover , .statisticHolder:hover {
+.statistics-withImage {
+  width: 48px;
+  height: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 9px;
+  line-height: 12px;
+  font-size: 11px;
+  display: flex;
+}
+
+.stats {
+  width: auto;
+  height: auto;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.stats:hover {
   color: #333333;
   cursor: pointer;
 }
