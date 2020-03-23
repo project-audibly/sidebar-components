@@ -1,4 +1,5 @@
 import React from 'react';
+import Tooltip from './Tooltip.jsx';
 
 class RelatedPlaylist extends React.Component {
   constructor(props) {
@@ -19,9 +20,9 @@ class RelatedPlaylist extends React.Component {
        <div className="listContainer">
           <img src={playlistImage} className="info-image" />
           <div className="info-artistName">
-            <UserTooltip image={userImage} name={username} location={userLocation} followers={userFollowers}>
+            <Tooltip image={userImage} name={username} location={userLocation} followers={userFollowers}>
               {username}
-            </UserTooltip>
+            </Tooltip>
           </div>
           <div className="info-songName">{playlistName}</div>
           <span className="statistics">{playlistLikes}</span>

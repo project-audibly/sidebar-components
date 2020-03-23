@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ArtistTooltip extends React.Component {
+class Tooltip extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -43,4 +43,4 @@ class ArtistTooltip extends React.Component {
   }
 }
 
-export default ArtistTooltip;
+export default Tooltip;
