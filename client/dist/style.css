@@ -112,8 +112,8 @@ body {
 }
 
 .listContainer {
-width: 306px;
-height: 62px;
+  width: 306px;
+  height: 62px;
   margin-right: 6px;
   padding: 5px;
 }
@@ -128,7 +128,9 @@ height: 62px;
 
 .info-name:hover {
   color: #333333;
+  cursor: pointer;
 }
+
 .info-songName {
   width: 235px;
   height: 18px;
@@ -138,14 +140,35 @@ height: 62px;
   color: #333333;
 } 
 
-.statistics {
+.info-songName:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.statisticsFirst {
+  margin-left: 50px;
+  /* CHANGE MARGIN, FLEX BOX MAKE THESE THREE START + END SAME, IMAGE MIGHTN NEED TO CHANGE. OTHER = MARGIN-LEFT 70PX */
+}
+
+.statisticHolder{
+  margin-left: 70px; 
+}
+
+.statisticsFirst, .statistics, .statisticHolder {
   width: 59px; 
   height: 22px;
   font-size: 12px; 
   line-height: 16.8px;
   text-align: left;
+  padding-top: 5px;
+  padding-top: 5px;
   padding-right: 5px;
-  margin-left: 70px;
+  display: inline-block;
+}
+
+.statistics:hover , .statisticHolder:hover {
+  color: #333333;
+  cursor: pointer;
 }
 
 .hover-overlay {
@@ -153,8 +176,30 @@ height: 62px;
   height: 62px; 
   position: absolute;
   background-color: transparent;
-  color: black;
   text-align: center;
   padding: 30px 10px;
   border-radius: 6px;
+}
+
+.playButton {
+  height:50px;
+  width:50px;	
+  padding: 5px 6px;
+  margin-right: 4px;
+  text-align: left;
+  float: left;
+  cursor: pointer;
+}
+
+.heartButton, .moreButton {
+  width: 12px;
+  height: 12px; 
+  cursor: pointer;
+}
+
+
+.icon {
+  width: 12px;
+  height: 12px; 
+  filter: invert(67%) sepia(6%) saturate(8%) hue-rotate(5deg) brightness(92%) contrast(85%);
 }
