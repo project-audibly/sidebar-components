@@ -48,7 +48,6 @@ class App extends React.Component {
         <div className="content">
           <RelatedPlaylistsList relatedPlaylists={this.state.relatedPlaylists} />
         </div>
-
       </div>
     )
   }
