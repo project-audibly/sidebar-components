@@ -203,3 +203,19 @@ body {
   height: 12px; 
   filter: invert(67%) sepia(6%) saturate(8%) hue-rotate(5deg) brightness(92%) contrast(85%);
 }
+
+.userImage {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.recentUsers {
+  display: flex; 
+  max-width: 100%;
+}
+
+.columnTest {
+  width: 100%;
+  flex: 11.11%;
+}

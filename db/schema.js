@@ -76,7 +76,7 @@ const songSchema = new mongoose.Schema({
   likes: Number,
   reposts: Number,
   recent_user_likes: [userFiller],
-  recenter_user_reposts: [userFiller],
+  recent_user_reposts: [userFiller],
   related_songs: [relatedSongSchema],
   related_playlists: [relatedPlaylistSchema]
 });
