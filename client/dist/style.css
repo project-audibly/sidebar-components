@@ -172,23 +172,27 @@ body {
 }
 
 .hover-overlay {
-  width: 306px;
-  height: 62px; 
+  max-width: 306px;
+  max-height: 62px; 
   position: absolute;
+  z-index: 10;
   background-color: transparent;
-  text-align: center;
   padding: 30px 10px;
-  border-radius: 6px;
 }
 
 .playButton {
-  height:50px;
-  width:50px;	
-  padding: 5px 6px;
-  margin-right: 4px;
+  height: 30px;
+  width: 30px;	
   text-align: left;
   float: left;
   cursor: pointer;
+  filter: invert(41%) sepia(65%) saturate(3820%) hue-rotate(359deg) brightness(103%) contrast(111%);
+}
+
+.button {
+  background-color: transparent; 
+  outline: none; 
+  border: none;
 }
 
 .heartButton, .moreButton {
