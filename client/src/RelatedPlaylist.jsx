@@ -19,7 +19,7 @@ class RelatedPlaylist extends React.Component {
     return (
        <div className="listContainer">
           <img src={playlistImage} className="info-image" />
-          <div className="info-artistName">
+          <div className="info-name">
             <Tooltip image={userImage} name={username} location={userLocation} followers={userFollowers}>
               {username}
             </Tooltip>

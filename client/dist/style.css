@@ -118,7 +118,7 @@ height: 62px;
   padding: 5px;
 }
 
-.info-artistName {
+.info-name {
   width: 235px;
   height: 18px;
   line-height: 18.2px;
@@ -126,7 +126,7 @@ height: 62px;
   margin-left: 70px;
 }
 
-.info-artistName:hover {
+.info-name:hover {
   color: #333333;
 }
 .info-songName {

@@ -16,7 +16,7 @@ class RelatedSong extends React.Component {
       <div>
         <div className="listContainer">
           <img src={this.props.relatedSong.song_image_url} className="info-image" />
-          <div className="info-artistName">
+          <div className="info-name">
             <Tooltip image={artistImage} name={artistName} location={artistLocation} followers={artistFollowers}>
               {artistName}
             </Tooltip>
