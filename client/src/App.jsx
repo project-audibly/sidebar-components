@@ -11,7 +11,7 @@ class App extends React.Component {
       mainSongLikes: 0,
       mainSongReposts: 0,
       relatedSongs: [],
-      relatedPlaylist: []
+      relatedPlaylists: []
     };
 
     this.getMainSong = this.getMainSong.bind(this);
@@ -26,7 +26,7 @@ class App extends React.Component {
           mainSongLikes: res.data.likes,
           mainSongReposts: res.data.reposts,
           relatedSongs: res.data.related_songs,
-          relatedPlaylist: res.data.related_playlists
+          relatedPlaylists: res.data.related_playlists
         })
       })
       .catch((err) => {

@@ -9,7 +9,7 @@ function RelatedSongsList(props) {
         <div className="headerOption">View all</div>
       </div> */}
 
-      <div className="content">
+      <div>
         {props.relatedSongs.map((song, i) =>
           <RelatedSong key={i} relatedSong={song} />)}
       </div>
