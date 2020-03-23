@@ -1,5 +1,7 @@
 import React from 'react';
 import Tooltip from './Tooltip.jsx';
+import heart from '../dist/images/heart.png';
+import repost from '../dist/images/repost.png';
 
 class RelatedPlaylist extends React.Component {
   constructor(props) {
@@ -25,8 +27,14 @@ class RelatedPlaylist extends React.Component {
             </Tooltip>
           </div>
           <div className="info-songName">{playlistName}</div>
-          <span className="statistics">{playlistLikes}</span>
-          <span className="statistics">{playlistReposts}</span>
+          <div className="statisticHolder">
+            <img className="icon" src={heart} />
+            {playlistLikes}
+          </div>
+          <div className="statistics">
+            <img className="icon" src={repost} />
+            {playlistReposts}
+          </div>
         </div>
     )
   }

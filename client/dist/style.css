@@ -128,7 +128,9 @@ body {
 
 .info-name:hover {
   color: #333333;
+  cursor: pointer;
 }
+
 .info-songName {
   width: 235px;
   height: 18px;
@@ -138,12 +140,21 @@ body {
   color: #333333;
 } 
 
+.info-songName:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
 .statisticsFirst {
   margin-left: 50px;
   /* CHANGE MARGIN, FLEX BOX MAKE THESE THREE START + END SAME, IMAGE MIGHTN NEED TO CHANGE. OTHER = MARGIN-LEFT 70PX */
 }
 
-.statisticsFirst, .statistics {
+.statisticHolder{
+  margin-left: 70px; 
+}
+
+.statisticsFirst, .statistics, .statisticHolder {
   width: 59px; 
   height: 22px;
   font-size: 12px; 
@@ -153,6 +164,11 @@ body {
   padding-top: 5px;
   padding-right: 5px;
   display: inline-block;
+}
+
+.statistics:hover , .statisticHolder:hover {
+  color: #333333;
+  cursor: pointer;
 }
 
 .hover-overlay {
@@ -169,4 +185,5 @@ body {
 .icon {
   width: 12px;
   height: 12px; 
+  filter: invert(67%) sepia(6%) saturate(8%) hue-rotate(5deg) brightness(92%) contrast(85%);
 }
