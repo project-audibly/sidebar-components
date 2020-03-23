@@ -62,11 +62,21 @@ const relatedPlaylistSchema = new mongoose.Schema({
   user_image_url: String
 });
 
+const userFiller = new mongoose.Schema({
+  _id: Number,
+  user_name: String,
+  user_location: String,
+  user_followers: Number,
+  user_image_url: String
+})
+
 const songSchema = new mongoose.Schema({
   _id: Number,
   title: String,
   likes: Number,
   reposts: Number,
+  recent_user_likes: [userFiller],
+  recenter_user_reposts: [userFiller],
   related_songs: [relatedSongSchema],
   related_playlists: [relatedPlaylistSchema]
 });
@@ -74,5 +84,6 @@ const songSchema = new mongoose.Schema({
 module.exports = {
   relatedSongSchema,
   relatedPlaylistSchema,
+  userFiller,
   songSchema
 }; 
