@@ -41,10 +41,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-
         <div className="content">
           <RelatedSongsList relatedSongs={this.state.relatedSongs} />
         </div>
+        <div><br></br></div>
         <div className="content">
           <RelatedPlaylistsList relatedPlaylists={this.state.relatedPlaylists} />
         </div>
