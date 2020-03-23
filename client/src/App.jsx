@@ -3,6 +3,7 @@ import axios from 'axios';
 import RelatedSongsList from './RelatedSongsList.jsx';
 import RelatedPlaylistsList from './RelatedPlaylistsList.jsx';
 import TotalLikes from './TotalLikes.jsx';
+import TotalReposts from './TotalReposts.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -56,6 +57,10 @@ class App extends React.Component {
         <div><br></br></div>
         <div>
           <TotalLikes total={this.state.mainSongLikes} recentUserLikes={this.state.recentUserLikes} />
+        </div>
+        <div><br></br></div>
+        <div>
+          <TotalReposts total={this.state.mainSongReposts} recentUserReposts={this.state.recentUserReposts} />
         </div>
       </div>
     )
