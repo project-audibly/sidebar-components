@@ -2,20 +2,40 @@ body {
   font-family: Interstate, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Garuda, Verdana, Tahoma, sans-serif;
   font-size: 14px; 
   color: #999999;
+  background-color: #f2f2f2;
+}
+
+.headerContainer {
+  width: 300px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #b8b8b8;
+}
+
+.headerImage {
+  width: 21px;
+  height: 24px;
+  margin-right: 4px
+}
+
+.headerIcon {
+  width: 20px;
+  height: 20px;
+  filter: invert(67%) sepia(6%) saturate(8%) hue-rotate(5deg) brightness(92%) contrast(85%);
 }
 
 .headerTitle {
-  width: 89px;
+  width: auto;
   height: 24px;
-  line-height: 24px; 
   text-align: start; 
+  margin-right: auto;
 }
 
-.headerOption {
-  width: 48px;
+.headerMore {
+  width: auto;
   height: 18px;
-  line-height: 18.2px;
-  text-align: start;
+  margin-left: auto;
 }
 
 .content {
