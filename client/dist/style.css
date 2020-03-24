@@ -201,13 +201,11 @@ body {
   max-width: 306px;
   max-height: 62px; 
   position: absolute;
-  background-color: transparent;
 }
 
 .playButton {
   height: 30px;
   width: 30px;	
-  text-align: left;
   cursor: pointer;
   filter: invert(41%) sepia(65%) saturate(3820%) hue-rotate(359deg) brightness(103%) contrast(111%);
 }
@@ -218,12 +216,22 @@ body {
   border: none;
 }
 
-.heartButton, .moreButton {
+.optionalBtn {
+  background-color: #ffffff;
+  outline: #333333;
+  border-radius: 20%;
+  width: auto;
+  height: 22px;
+  padding: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 5px;
+}
+
+.optionalIcon {
   width: 12px;
   height: 12px; 
   cursor: pointer;
-  justify-self: end;
-  align-self: start;
 }
 
 .icon {
@@ -236,4 +244,34 @@ body {
   height: 40px;
   width: 40px;
   border-radius: 50%;
+}
+
+.hoverContainer {
+  width: 300px;
+  height: 62px;
+  padding: 5px; 
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.mainHoverBtn, .optionalHoverBtn {
+  flex: 1.5 2;
+  padding: 10px;
+}
+
+.mainHoverBtn {
+  height: 28px;
+  width: 28px;
+  justify-content: flex-start;
+}
+
+.optionalHoverBtn {
+  height: 22px;
+  width: 55px; 
+  padding-left: 20px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }

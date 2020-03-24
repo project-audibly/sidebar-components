@@ -38,20 +38,24 @@ class HoverButtons extends React.Component {
     let button;
 
     if (playing) {
-        button = <PlayButton onClick={this.pauseSong} isPlaying={this.state.isPlaying}/>
+      button = <PlayButton onClick={this.pauseSong} isPlaying={this.state.isPlaying} />
 
     } else {
-        button = <PlayButton onClick={this.playSong} isPlaying={this.state.isPlaying}/>
+      button = <PlayButton onClick={this.playSong} isPlaying={this.state.isPlaying} />
     }
 
     return (
       <div onMouseLeave={this.handleMouseExit}>
         {this.state.isVisible &&
-          <div className={'hover-overlay'}>
-            <div className="listContainer">
-              {button}
-              <button><img src={heart} className="heartButton" /></button>
-              <button><img src={more} className = "moreButton" /></button>
+          <div className="hover-overlay">
+            <div className="hoverContainer">
+              <div className="mainHoverBtn">
+                {button}
+              </div>
+              <div className="optionalHoverBtn">
+                <button className="optionalBtn"><img src={heart} className="optionalIcon" /></button>
+                <button className="optionalBtn"><img src={more} className="optionalIcon" /></button>
+              </div>
             </div>
           </div>
         }
