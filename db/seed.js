@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { relatedSongSchema, relatedPlaylistSchema, songSchema } = require('../db/schema.js');
+const { relatedSongSchema, relatedPlaylistSchema, userFiller, songSchema } = require('../db/schema.js');
 const faker = require('faker');
 const db = require('./index.js');
 
@@ -45,7 +45,7 @@ const generateRelatedPlaylists = function () {
     const playlistName = faker.lorem.words();
     const playlistLikes = faker.random.number();
     const playlistReposts = faker.random.number();
-    const userName = faker.lorem.words();
+    const userName = faker.name.firstName();
     const userLocation = faker.address.city();
     const userFollowers = faker.random.number();
     const playlistImage = faker.image.image();
@@ -67,6 +67,27 @@ const generateRelatedPlaylists = function () {
   return relatedPlaylists;
 };
 
+const generateUserFiller = function () {
+  let userFillers = [];
+
+  for (let i = 0; i < 9; i++) {
+    const userName = faker.name.firstName();
+    const userLocation = faker.address.city();
+    const userFollowers = faker.random.number();
+    const userImage = faker.image.avatar();
+
+    let userFiller = {
+      user_name: userName,
+      user_location: userLocation,
+      user_followers: userFollowers,
+      user_image_url: userImage
+    };
+
+    userFillers.push(userFiller);
+  }
+  return userFillers; 
+};
+
 const generateSongs = function () {
   let songs = [];
 
@@ -79,6 +100,8 @@ const generateSongs = function () {
       title: title,
       likes: likes,
       reposts: reposts,
+      recent_user_likes: generateUserFiller(),
+      recent_user_reposts: generateUserFiller(),
       related_songs: generateRelatedSongs(),
       related_playlists: generateRelatedPlaylists()
     })

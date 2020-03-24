@@ -24,35 +24,42 @@ class RelatedSong extends React.Component {
     let songComments = this.props.relatedSong.song_comments;
 
     return (
-      <HoverButtons>
-        <div className="listContainer">
-          
-          <img src={songImage} className="info-image" />
-          <div className="info-name">
-            <Tooltip image={artistImage} name={artistName} location={artistLocation} followers={artistFollowers}>
-              {artistName}
-            </Tooltip>
-          </div>
-          <div className="info-songName">{songName}</div>
-          <div className="statisticsFirst">
-            <img className="icon" src={play} />
-            {songPlays}
-          </div>
-          <div className="statistics">
-            <img className="icon" src={heart} />
-            {songLikes}
-          </div>
-          <div className="statistics">
-            <img className="icon" src={repost} />
-            {songReposts}
-          </div>
-          <div className="statistics">
-            <img className="icon" src={comment} />
-            {songComments}
-          </div>
+      <div className="listContainer">
+        <HoverButtons>
 
-        </div>
-      </HoverButtons>
+          <div className="listItem">
+            <div className="listImage">
+              <img src={songImage} className="info-image" />
+            </div>
+            <div className="info-name">
+              <Tooltip image={artistImage} name={artistName} location={artistLocation} followers={artistFollowers}>
+                {artistName}
+              </Tooltip>
+            </div>
+            <div className="info-songName">{songName}</div>
+
+            <div className="statistics">
+              <div className="statistics-withImage">
+                <img className="icon" src={play} />
+                <div className="stats">{songPlays}</div>
+              </div>
+              <div className="statistics-withImage">
+                <img className="icon" src={heart} />
+                <div className="stats">{songLikes}</div>
+              </div>
+              <div className="statistics-withImage">
+                <img className="icon" src={repost} />
+                <div className="stats">{songReposts}</div>
+              </div>
+              <div className="statistics-withImage">
+                <img className="icon" src={comment} />
+                <div className="stats">{songComments}</div>
+              </div>
+            </div>
+
+          </div>
+        </HoverButtons>
+      </div>
     )
   }
 }

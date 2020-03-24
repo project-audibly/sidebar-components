@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import RelatedSongsList from './RelatedSongsList.jsx';
 import RelatedPlaylistsList from './RelatedPlaylistsList.jsx';
+import TotalLikes from './TotalLikes.jsx';
+import TotalReposts from './TotalReposts.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +13,9 @@ class App extends React.Component {
       mainSongLikes: 0,
       mainSongReposts: 0,
       relatedSongs: [],
-      relatedPlaylists: []
+      relatedPlaylists: [],
+      recentUserLikes: [],
+      recentUserReposts: []
     };
 
     this.getMainSong = this.getMainSong.bind(this);
@@ -26,7 +30,9 @@ class App extends React.Component {
           mainSongLikes: res.data.likes,
           mainSongReposts: res.data.reposts,
           relatedSongs: res.data.related_songs,
-          relatedPlaylists: res.data.related_playlists
+          relatedPlaylists: res.data.related_playlists,
+          recentUserLikes: res.data.recent_user_likes,
+          recentUserReposts: res.data.recent_user_reposts
         })
       })
       .catch((err) => {
@@ -41,12 +47,19 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="content">
-          <RelatedSongsList relatedSongs={this.state.relatedSongs} />
-        </div>
-        <div><br></br></div>
-        <div className="content">
-          <RelatedPlaylistsList relatedPlaylists={this.state.relatedPlaylists} />
+        <div className="sidebarContent">
+          <div>
+            <RelatedSongsList relatedSongs={this.state.relatedSongs} />
+          </div>
+          <div>
+            <RelatedPlaylistsList relatedPlaylists={this.state.relatedPlaylists} />
+          </div>
+          <div>
+            <TotalLikes total={this.state.mainSongLikes} recentUserLikes={this.state.recentUserLikes} />
+          </div>
+          <div>
+            <TotalReposts total={this.state.mainSongReposts} recentUserReposts={this.state.recentUserReposts} />
+          </div>
         </div>
       </div>
     )
