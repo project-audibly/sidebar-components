@@ -19,6 +19,8 @@ class RelatedPlaylist extends React.Component {
     let userImage = this.props.relatedPlaylist.user_image_url;
 
     return (
+      <div className="listContainer">
+
         <div className="listItem">
           <div className="listImage">
             <img src={playlistImage} className="info-image" />
@@ -42,6 +44,7 @@ class RelatedPlaylist extends React.Component {
           </div>
 
         </div>
+      </div>
     )
   }
 }

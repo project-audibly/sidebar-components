@@ -24,7 +24,8 @@ class RelatedSong extends React.Component {
     let songComments = this.props.relatedSong.song_comments;
 
     return (
-      <HoverButtons>
+      <div className="listContainer">
+        <HoverButtons>
 
           <div className="listItem">
             <div className="listImage">
@@ -57,7 +58,8 @@ class RelatedSong extends React.Component {
             </div>
 
           </div>
-      </HoverButtons>
+        </HoverButtons>
+      </div>
     )
   }
 }

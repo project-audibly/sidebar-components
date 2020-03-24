@@ -47,18 +47,15 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="content">
+        <div>
           <RelatedSongsList relatedSongs={this.state.relatedSongs} />
         </div>
-        <div><br></br></div>
         <div>
           <RelatedPlaylistsList relatedPlaylists={this.state.relatedPlaylists} />
         </div>
-        <div><br></br></div>
         <div>
           <TotalLikes total={this.state.mainSongLikes} recentUserLikes={this.state.recentUserLikes} />
         </div>
-        <div><br></br></div>
         <div>
           <TotalReposts total={this.state.mainSongReposts} recentUserReposts={this.state.recentUserReposts} />
         </div>

@@ -5,7 +5,7 @@ function RelatedPlaylistsList(props) {
   return (
     <div>
       <div> Related Playlists </div>
-      <div className="listContainer">
+      <div className="content">
         {props.relatedPlaylists.map((playlist, i) =>
           <RelatedPlaylist key={i} relatedPlaylist={playlist} />)}
       </div>

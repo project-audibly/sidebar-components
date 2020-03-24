@@ -2,7 +2,6 @@ body {
   font-family: Interstate, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Garuda, Verdana, Tahoma, sans-serif;
   font-size: 14px; 
   color: #999999;
-
 }
 
 .headerTitle {
@@ -20,8 +19,8 @@ body {
 }
 
 .content {
-  width: 300px;
-  height: 216px;
+  height: auto;
+  width: auto;
   padding-top: 5px;
 }
 
@@ -89,6 +88,20 @@ body {
   color: #999999;
 }
 
+.userContainer {
+  width: 300px;
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+}
+
+.userItem {
+  width: 40px;
+  height: 40px;
+}
+
 .listContainer {
   width: 300px;
   height: 62px;
@@ -101,7 +114,7 @@ body {
   margin-right: 6px;
   display: grid;
   grid-template-columns: 80px auto;
-  grid-template-rows: 33% 33% 33.33%; 
+  grid-template-rows: 33% 33% 33%; 
   grid-template-areas: "img artist"
                        "img song"
                        "img stats"
@@ -117,8 +130,6 @@ body {
 .info-image {
   height: 50px;
   width: 50px;	
-  padding: 5px 6px;
-  margin-right: 4px;
   grid-area: img;
 }
 
@@ -190,16 +201,13 @@ body {
   max-width: 306px;
   max-height: 62px; 
   position: absolute;
-  z-index: 10;
   background-color: transparent;
-  padding: 30px 10px;
 }
 
 .playButton {
   height: 30px;
   width: 30px;	
   text-align: left;
-  float: left;
   cursor: pointer;
   filter: invert(41%) sepia(65%) saturate(3820%) hue-rotate(359deg) brightness(103%) contrast(111%);
 }
@@ -214,8 +222,9 @@ body {
   width: 12px;
   height: 12px; 
   cursor: pointer;
+  justify-self: end;
+  align-self: start;
 }
-
 
 .icon {
   width: 12px;
@@ -224,17 +233,7 @@ body {
 }
 
 .userImage {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-}
-
-.recentUsers {
-  display: flex; 
-  max-width: 100%;
-}
-
-.columnTest {
-  width: 100%;
-  flex: 11.11%;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }

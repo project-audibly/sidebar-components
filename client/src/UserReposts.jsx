@@ -14,11 +14,13 @@ class UserReposts extends React.Component {
 
     return (
       <div>
-          <div className="columnTest">
+        {/* <div className="userContainer"> */}
+          <div className="userItem">
             <Tooltip image={userImage} name={username} location={userLocation} followers={userFollowers}>
               <img src={userImage} className="userImage" />
             </Tooltip>
           </div>
+        {/* </div> */}
       </div>
     )
   }

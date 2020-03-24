@@ -5,9 +5,11 @@ function TotalReposts(props) {
   return (
     <div>
       <div>{props.total} Reposts</div>
-      <div className="recentUsers">
+      <div className="content">
+        <div className="userContainer">
         {props.recentUserReposts.map((user, i) =>
           <UserReposts key={i} users={user} />)}
+          </div>
       </div>
     </div>
   )
