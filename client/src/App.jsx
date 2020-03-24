@@ -4,6 +4,7 @@ import RelatedSongsList from './RelatedSongsList.jsx';
 import RelatedPlaylistsList from './RelatedPlaylistsList.jsx';
 import TotalLikes from './TotalLikes.jsx';
 import TotalReposts from './TotalReposts.jsx';
+import Links from './Links.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -47,18 +48,15 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="sidebarContent">
-          <div>
+        <div className="sidebar">
+          <div className="sidebarContent">
             <RelatedSongsList relatedSongs={this.state.relatedSongs} />
-          </div>
-          <div>
             <RelatedPlaylistsList relatedPlaylists={this.state.relatedPlaylists} />
-          </div>
-          <div>
             <TotalLikes total={this.state.mainSongLikes} recentUserLikes={this.state.recentUserLikes} />
-          </div>
-          <div>
             <TotalReposts total={this.state.mainSongReposts} recentUserReposts={this.state.recentUserReposts} />
+          </div>
+          <div className="linksContent">
+            <Links />
           </div>
         </div>
       </div>
