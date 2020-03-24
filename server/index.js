@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const bodyParser = require('body-parser');
 const port = 3003;
 // const controller = require('./controller.js');
 const db = require('../db/index.js');
 const Song = require('../db/seed.js');
 
-app.use(express.static('/Users/ohjeezz/Documents/Hack Reactor/sidebar-components-services/client/dist'));
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
