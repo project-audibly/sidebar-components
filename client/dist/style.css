@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid #b8b8b8;
+  padding-top: 25px;
 }
 
 .headerImage {
