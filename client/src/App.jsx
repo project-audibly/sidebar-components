@@ -47,17 +47,19 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <RelatedSongsList relatedSongs={this.state.relatedSongs} />
-        </div>
-        <div>
-          <RelatedPlaylistsList relatedPlaylists={this.state.relatedPlaylists} />
-        </div>
-        <div>
-          <TotalLikes total={this.state.mainSongLikes} recentUserLikes={this.state.recentUserLikes} />
-        </div>
-        <div>
-          <TotalReposts total={this.state.mainSongReposts} recentUserReposts={this.state.recentUserReposts} />
+        <div className="sidebarContent">
+          <div>
+            <RelatedSongsList relatedSongs={this.state.relatedSongs} />
+          </div>
+          <div>
+            <RelatedPlaylistsList relatedPlaylists={this.state.relatedPlaylists} />
+          </div>
+          <div>
+            <TotalLikes total={this.state.mainSongLikes} recentUserLikes={this.state.recentUserLikes} />
+          </div>
+          <div>
+            <TotalReposts total={this.state.mainSongReposts} recentUserReposts={this.state.recentUserReposts} />
+          </div>
         </div>
       </div>
     )

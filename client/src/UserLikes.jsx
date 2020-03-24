@@ -13,13 +13,11 @@ class UserLikes extends React.Component {
     let userImage = this.props.users.user_image_url;
 
     return (
-        // <div className="userContainer">
           <div className="userItem">
             <Tooltip image={userImage} name={username} location={userLocation} followers={userFollowers}>
               <img src={userImage} className="userImage" />
             </Tooltip>
           </div>
-        // </div>
     )
   }
 }

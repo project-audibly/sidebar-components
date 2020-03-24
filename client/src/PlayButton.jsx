@@ -6,9 +6,9 @@ function PlayButton(props) {
   const isPlaying = props.isPlaying;
 
   if (isPlaying) {
-    return (<button onClick={props.onClick} className="button"><img src={play} className="playButton"/></button>)
-  } else {
     return (<button onClick={props.onClick} className="button"><img src={pause} className="playButton"/></button>)
+  } else {
+    return (<button onClick={props.onClick} className="button"><img src={play} className="playButton"/></button>)
 
   }
 }
