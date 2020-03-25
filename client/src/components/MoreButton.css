@@ -11,10 +11,18 @@
   position: relative;
 }
 
+.optionalBtn:active {
+  color: #ff5500;
+}
+
 .optionalIcon {
   width: 12px;
   height: 12px; 
   cursor: pointer;
+}
+
+.optionalIcon:active {
+  filter: invert(41%) sepia(65%) saturate(3820%) hue-rotate(359deg) brightness(103%) contrast(111%);
 }
 
 .moreOptions {

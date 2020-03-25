@@ -11,13 +11,19 @@ class HoverButtons extends React.Component {
     this.state = {
       isVisible: false,
       isPlaying: false,
-      showMenu: false
+      isClicked: false,
+      isShowing: false,
     }
-
+    this.toggleOptions = this.toggleOptions.bind(this);
     this.handleMouseOver = this.handleMouseOver.bind(this);
     this.handleMouseExit = this.handleMouseExit.bind(this);
     this.playSong = this.playSong.bind(this);
     this.pauseSong = this.pauseSong.bind(this);
+    this.stayVisible = this.stayVisible.bind(this);
+  }
+
+  toggleOptions() {
+    this.setState({ isShowing: !this.state.isShowing });
   }
 
   handleMouseOver() {
@@ -25,7 +31,7 @@ class HoverButtons extends React.Component {
   }
 
   handleMouseExit() {
-    this.setState({ isVisible: false })
+    this.setState({ isVisible: false });
   }
 
   playSong() {
@@ -36,8 +42,12 @@ class HoverButtons extends React.Component {
     this.setState({ isPlaying: false });
   }
 
-  showMenu() {
-    this.setState({ showMenu: true });
+  stayVisible() {
+    this.setState({ isClicked: !this.state.isClicked });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("mouseleave");
   }
 
   render() {
@@ -52,21 +62,26 @@ class HoverButtons extends React.Component {
     }
 
     return (
-      <div onMouseLeave={this.handleMouseExit}>
-        {this.state.isVisible &&
-          <div className="hoverOverlay">
+      <div>
+
+        {this.state.isVisible ?
+          (<div className="hoverOverlay" onMouseLeave={this.handleMouseExit}>
             <div className="hoverContainer">
               <div className="mainHoverBtn">
                 {button}
               </div>
               <div className="optionalHoverBtn">
-                <button className="optionalBtn"><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/heart.png" className="optionalIcon" /></button>
-                <MoreButton />
-                {/* <button className="optionalBtn"><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/more.png" className="optionalIcon" /></button> */}
+                <button className="optionalBtn" onClick={this.stayVisible}><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/heart.png" className="optionalIcon" /></button>
+                {/* <MoreButton onClick={this.stayVisible}/> */}
+                <button className="optionalBtn" onClick={() => { this.toggleOptions(); this.stayVisible() }}
+                ><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/more.png" className="optionalIcon" /><MoreButton isShowing={this.state.isShowing} /></button>
               </div>
             </div>
-          </div>
+          </div>)
+          :
+          (null)
         }
+
         <div onMouseOver={this.handleMouseOver} className="listContainer">
           {this.props.children}
         </div>
