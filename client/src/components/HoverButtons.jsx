@@ -1,5 +1,6 @@
 import React from 'react';
 import PlayButton from './PlayButton.jsx';
+import MoreButton from './MoreButton.jsx';
 
 import CSSModules from 'react-css-modules';
 import styles from './HoverButtons.css';
@@ -9,7 +10,8 @@ class HoverButtons extends React.Component {
     super(props)
     this.state = {
       isVisible: false,
-      isPlaying: false
+      isPlaying: false,
+      showMenu: false
     }
 
     this.handleMouseOver = this.handleMouseOver.bind(this);
@@ -34,6 +36,10 @@ class HoverButtons extends React.Component {
     this.setState({ isPlaying: false });
   }
 
+  showMenu() {
+    this.setState({ showMenu: true });
+  }
+
   render() {
     const playing = this.state.isPlaying;
     let button;
@@ -55,7 +61,8 @@ class HoverButtons extends React.Component {
               </div>
               <div className="optionalHoverBtn">
                 <button className="optionalBtn"><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/heart.png" className="optionalIcon" /></button>
-                <button className="optionalBtn"><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/more.png" className="optionalIcon" /></button>
+                <MoreButton />
+                {/* <button className="optionalBtn"><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/more.png" className="optionalIcon" /></button> */}
               </div>
             </div>
           </div>
