@@ -1,0 +1,63 @@
+.tooltip {
+  position: relative;
+}
+
+.tooltipBubble {
+  min-width: 120px;
+  max-width: 210px;
+  position: absolute;
+  z-index: 10;
+  background-color: #ffffff;
+  color: black;
+  text-align: center;
+  padding: 30px 10px;
+  border-radius: 6px;
+  border: solid 1px #ccc;
+}
+
+.tooltipBubble::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #ccc transparent;
+  /* border: solid 1px #ccc; */
+}
+
+.tooltipBottom {
+  top: 100%;
+  left: 50%;
+  padding-top: 9px;
+  transform: translateX(-50%);
+}
+
+.tooltipImage {
+  padding: 15px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.tooltipName {
+  padding: 3px;
+  color: #333333;
+}
+
+.tooltipFollowers {
+  font-size: 12px; 
+  line-height: 16.8px;
+  text-align: center;
+  padding: 3px;
+  color: #999999;
+} 
+
+.tooltipLocation {
+  padding: 3px;
+  font-size: 12px; 
+  line-height: 16.8px;
+  text-align: center;
+  color: #999999;
+}

@@ -1,0 +1,13 @@
+.button {
+  background-color: transparent; 
+  outline: none; 
+  border: none;
+}
+
+.playButton {
+  height: 30px;
+  width: 30px;	
+  cursor: pointer;
+  filter: invert(41%) sepia(65%) saturate(3820%) hue-rotate(359deg) brightness(103%) contrast(111%);
+}
+

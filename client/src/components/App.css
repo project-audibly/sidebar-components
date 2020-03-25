@@ -1,0 +1,22 @@
+body {
+  font-family: Interstate, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Garuda, Verdana, Tahoma, sans-serif;
+  font-size: 14px; 
+  color: #999999;
+  background-color: #f2f2f2;
+}
+
+.sidebar {
+  width: 300px;
+  height: 850px;
+  padding-bottom: 50px;
+}
+
+.sidebarContent {
+  height: 750;
+  width: 300px;
+}
+
+.linksContent {
+  height: 100px;
+  width: 300px;
+}

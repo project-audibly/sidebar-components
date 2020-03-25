@@ -1,12 +1,14 @@
 import React from 'react';
 import UserLikes from './UserLikes.jsx';
-import heart from '../dist/images/heart.png';
+
+import CSSModules from 'react-css-modules';
+import styles from './TotalLikes.css';
 
 function TotalLikes(props) {
   return (
     <div>
       <div className="headerContainer">
-        <div className="headerImage"><img src={heart} className="headerIcon" /> </div>
+        <div className="headerImage"><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/heart.png" className="headerIcon" /> </div>
         <div className="headerTitle">{props.total} Likes</div>
         <div className="headerMore">View all</div>
       </div>
