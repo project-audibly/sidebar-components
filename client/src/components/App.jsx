@@ -1,5 +1,9 @@
 import React from 'react';
 import axios from 'axios';
+
+import CSSModules from 'react-css-modules';
+import styles from './App.css';
+
 import RelatedSongsList from './RelatedSongsList.jsx';
 import RelatedPlaylistsList from './RelatedPlaylistsList.jsx';
 import TotalLikes from './TotalLikes.jsx';

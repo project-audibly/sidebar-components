@@ -1,12 +1,11 @@
 import React from 'react';
 import UserReposts from './UserReposts.jsx';
-import repost from '../dist/images/repost.png';
 
 function TotalReposts(props) {
   return (
     <div>
       <div className="headerContainer">
-        <div className="headerImage"><img src={repost} className="headerIcon" /> </div>
+        <div className="headerImage"><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/repost.png" className="headerIcon" /> </div>
         <div className="headerTitle">{props.total} Reposts</div>
         <div className="headerMore">View all</div>
       </div>

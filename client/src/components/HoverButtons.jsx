@@ -1,7 +1,5 @@
 import React from 'react';
 import PlayButton from './PlayButton.jsx';
-import more from '../dist/images/more.png';
-import heart from '../dist/images/heart.png';
 
 class HoverButtons extends React.Component {
   constructor(props) {
@@ -53,8 +51,8 @@ class HoverButtons extends React.Component {
                 {button}
               </div>
               <div className="optionalHoverBtn">
-                <button className="optionalBtn"><img src={heart} className="optionalIcon" /></button>
-                <button className="optionalBtn"><img src={more} className="optionalIcon" /></button>
+                <button className="optionalBtn"><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/heart.png" className="optionalIcon" /></button>
+                <button className="optionalBtn"><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/more.png" className="optionalIcon" /></button>
               </div>
             </div>
           </div>

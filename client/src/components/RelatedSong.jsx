@@ -1,10 +1,6 @@
 import React from 'react';
 import Tooltip from './Tooltip.jsx';
 import HoverButtons from './HoverButtons.jsx';
-import play from '../dist/images/play.png';
-import heart from '../dist/images/heart.png';
-import repost from '../dist/images/repost.png';
-import comment from '../dist/images/comment.png';
 
 class RelatedSong extends React.Component {
   constructor(props) {
@@ -40,19 +36,19 @@ class RelatedSong extends React.Component {
 
             <div className="statistics">
               <div className="statistics-withImage">
-                <img className="icon" src={play} />
+                <img className="icon" src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/play.png" />
                 <div className="stats">{songPlays}</div>
               </div>
               <div className="statistics-withImage">
-                <img className="icon" src={heart} />
+                <img className="icon" src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/heart.png" />
                 <div className="stats">{songLikes}</div>
               </div>
               <div className="statistics-withImage">
-                <img className="icon" src={repost} />
+                <img className="icon" src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/repost.png" />
                 <div className="stats">{songReposts}</div>
               </div>
               <div className="statistics-withImage">
-                <img className="icon" src={comment} />
+                <img className="icon" src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/comment.png" />
                 <div className="stats">{songComments}</div>
               </div>
             </div>
