@@ -86,6 +86,7 @@
   height: auto;
   font-size: 12px;
   line-height: 12px;
+  z-index: 6;
 }
 
 .stats:hover {

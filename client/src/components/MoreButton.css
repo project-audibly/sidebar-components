@@ -27,6 +27,7 @@
 
 .moreOptions {
   position: absolute;
+  z-index: 9;
 }
 
 .moreOptionsBtn {

@@ -4,6 +4,12 @@
   position: absolute;
 }
 
+.hoverArea {
+  max-width: 306px;
+  max-height: 62px;
+  position: absolute;
+}
+
 .hoverContainer {
   width: 300px;
   height: 62px;
