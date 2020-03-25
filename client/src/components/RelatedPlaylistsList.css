@@ -7,6 +7,14 @@
   padding-top: 25px;
 }
 
+/* .headerContainer:hover {
+  cursor: pointer;
+} */
+
+/* .headerContainer:hover ~ .headerMore {
+  color: #333333; 
+} */
+
 .headerImage {
   width: 21px;
   height: 24px;
@@ -30,6 +38,10 @@
   width: auto;
   height: 18px;
   margin-left: auto;
+}
+
+.headerMore:hover {
+  color: #333333;
 }
 
 .content {
