@@ -1,5 +1,8 @@
 import React from 'react';
 
+import CSSModules from 'react-css-modules';
+import styles from './Links.css';
+
 function Links (props) {
   return (
     <div>

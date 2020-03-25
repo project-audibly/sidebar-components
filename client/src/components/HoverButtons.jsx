@@ -1,6 +1,9 @@
 import React from 'react';
 import PlayButton from './PlayButton.jsx';
 
+import CSSModules from 'react-css-modules';
+import styles from './HoverButtons.css';
+
 class HoverButtons extends React.Component {
   constructor(props) {
     super(props)
@@ -45,7 +48,7 @@ class HoverButtons extends React.Component {
     return (
       <div onMouseLeave={this.handleMouseExit}>
         {this.state.isVisible &&
-          <div className="hover-overlay">
+          <div className="hoverOverlay">
             <div className="hoverContainer">
               <div className="mainHoverBtn">
                 {button}

@@ -1,6 +1,9 @@
 import React from 'react';
 import Tooltip from './Tooltip.jsx';
 
+import CSSModules from 'react-css-modules';
+import styles from './UserReposts.css';
+
 class UserReposts extends React.Component {
   constructor(props) {
     super(props)
@@ -14,13 +17,11 @@ class UserReposts extends React.Component {
 
     return (
       <div>
-        {/* <div className="userContainer"> */}
           <div className="userItem">
             <Tooltip image={userImage} name={username} location={userLocation} followers={userFollowers}>
               <img src={userImage} className="userImage" />
             </Tooltip>
           </div>
-        {/* </div> */}
       </div>
     )
   }

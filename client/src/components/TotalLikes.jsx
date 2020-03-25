@@ -1,6 +1,9 @@
 import React from 'react';
 import UserLikes from './UserLikes.jsx';
 
+import CSSModules from 'react-css-modules';
+import styles from './TotalLikes.css';
+
 function TotalLikes(props) {
   return (
     <div>

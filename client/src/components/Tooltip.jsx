@@ -1,5 +1,8 @@
 import React from 'react';
 
+import CSSModules from 'react-css-modules';
+import styles from './Tooltip.css';
+
 class Tooltip extends React.Component {
   constructor(props) {
     super(props)
@@ -23,12 +26,12 @@ class Tooltip extends React.Component {
     return (
       <span className='tooltip' onMouseLeave={this.handleMouseExit}>
         {this.state.isVisible &&
-          <span className={`tooltip-bubble tooltip-bottom`}>
+          <span className={`tooltipBubble tooltipBottom`}>
               <div>
-                <img src={this.props.image} className="tooltip-image"></img>
-                <div className='tooltip-name'>{this.props.name}</div>
-                <div className='tooltip-followers'>{this.props.followers}</div>
-                <div className='tooltip-location'>{this.props.location}</div>
+                <img src={this.props.image} className='tooltipImage'></img>
+                <div className='tooltipName'>{this.props.name}</div>
+                <div className='tooltipFollowers'>{this.props.followers}</div>
+                <div className='tooltipLocation'>{this.props.location}</div>
               </div>
           </span>
         }

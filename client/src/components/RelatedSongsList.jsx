@@ -1,6 +1,9 @@
 import React from 'react';
 import RelatedSong from './RelatedSong.jsx';
 
+import CSSModules from 'react-css-modules';
+import styles from './RelatedSongsList.css';
+
 function RelatedSongsList(props) {
   return (
     <div>

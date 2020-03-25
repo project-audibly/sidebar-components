@@ -1,0 +1,48 @@
+.headerContainer {
+  width: 300px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #b8b8b8;
+  padding-top: 25px;
+}
+
+.headerImage {
+  width: 21px;
+  height: 24px;
+  margin-right: 4px
+}
+
+.headerTitle {
+  width: auto;
+  height: 24px;
+  text-align: start; 
+  margin-right: auto;
+}
+
+.headerIcon {
+  width: 20px;
+  height: 20px;
+  filter: invert(67%) sepia(6%) saturate(8%) hue-rotate(5deg) brightness(92%) contrast(85%);
+}
+
+.headerMore {
+  width: auto;
+  height: 18px;
+  margin-left: auto;
+}
+
+.content {
+  height: auto;
+  width: auto;
+  padding-top: 5px;
+}
+
+.userContainer {
+  width: 300px;
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+}

@@ -1,6 +1,9 @@
 import React from 'react';
 import RelatedPlaylist from './RelatedPlaylist.jsx';
 
+import CSSModules from 'react-css-modules';
+import styles from './RelatedPlaylistsList.css';
+
 function RelatedPlaylistsList(props) {
   return (
     <div>

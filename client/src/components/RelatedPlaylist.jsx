@@ -1,6 +1,9 @@
 import React from 'react';
 import Tooltip from './Tooltip.jsx';
 
+import CSSModules from 'react-css-modules';
+import styles from './RelatedPlaylist.css';
+
 class RelatedPlaylist extends React.Component {
   constructor(props) {
     super(props)
@@ -21,21 +24,21 @@ class RelatedPlaylist extends React.Component {
 
         <div className="listItem">
           <div className="listImage">
-            <img src={playlistImage} className="info-image" />
+            <img src={playlistImage} className="infoImage" />
           </div>
-          <div className="info-name">
+          <div className="infoName">
             <Tooltip image={userImage} name={username} location={userLocation} followers={userFollowers}>
               {username}
             </Tooltip>
           </div>
-          <div className="info-songName">{playlistName}</div>
+          <div className="infoSongName">{playlistName}</div>
 
           <div className="statistics">
-            <div className="statistics-withImage">
+            <div className="statisticsWithImage">
               <img className="icon" src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/heart.png" />
               <div className="stats">{playlistLikes}</div>
             </div>
-            <div className="statistics-withImage">
+            <div className="statisticsWithImage">
               <img className="icon" src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/repost.png" />
               <div className="stats">{playlistReposts}</div>
             </div>

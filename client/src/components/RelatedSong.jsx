@@ -2,6 +2,9 @@ import React from 'react';
 import Tooltip from './Tooltip.jsx';
 import HoverButtons from './HoverButtons.jsx';
 
+import CSSModules from 'react-css-modules';
+import styles from './RelatedSong.css';
+
 class RelatedSong extends React.Component {
   constructor(props) {
     super(props)
@@ -25,29 +28,29 @@ class RelatedSong extends React.Component {
 
           <div className="listItem">
             <div className="listImage">
-              <img src={songImage} className="info-image" />
+              <img src={songImage} className="infoImage" />
             </div>
-            <div className="info-name">
+            <div className="infoName">
               <Tooltip image={artistImage} name={artistName} location={artistLocation} followers={artistFollowers}>
                 {artistName}
               </Tooltip>
             </div>
-            <div className="info-songName">{songName}</div>
+            <div className="infoSongName">{songName}</div>
 
             <div className="statistics">
-              <div className="statistics-withImage">
+              <div className="statisticsWithImage">
                 <img className="icon" src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/play.png" />
                 <div className="stats">{songPlays}</div>
               </div>
-              <div className="statistics-withImage">
+              <div className="statisticsWithImage">
                 <img className="icon" src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/heart.png" />
                 <div className="stats">{songLikes}</div>
               </div>
-              <div className="statistics-withImage">
+              <div className="statisticsWithImage">
                 <img className="icon" src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/repost.png" />
                 <div className="stats">{songReposts}</div>
               </div>
-              <div className="statistics-withImage">
+              <div className="statisticsWithImage">
                 <img className="icon" src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/comment.png" />
                 <div className="stats">{songComments}</div>
               </div>

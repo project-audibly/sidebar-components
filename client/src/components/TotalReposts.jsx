@@ -1,6 +1,9 @@
 import React from 'react';
 import UserReposts from './UserReposts.jsx';
 
+import CSSModules from 'react-css-modules';
+import styles from './TotalReposts.css';
+
 function TotalReposts(props) {
   return (
     <div>

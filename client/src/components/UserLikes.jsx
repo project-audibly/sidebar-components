@@ -1,6 +1,9 @@
 import React from 'react';
 import Tooltip from './Tooltip.jsx';
 
+import CSSModules from 'react-css-modules';
+import styles from './UserLikes.css';
+
 class UserLikes extends React.Component {
   constructor(props) {
     super(props)
