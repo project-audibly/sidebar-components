@@ -114,17 +114,16 @@
   width: 400px;
   height: 90px;
   margin-bottom: 15px;  
+  font-size: 18px;
+  background: #fff;
+  color: #333;
 }
 
 .loginForm {
+  width: 100%; 
   margin-bottom: 5px;
-  font-size: 18px;
-  line-height: 24px;
   padding: 7px 8px;
   border-radius: 5px;
-  background: #fff;
-  color: #333;
-  width: 100%; 
 }
 
 .loginBtn {
