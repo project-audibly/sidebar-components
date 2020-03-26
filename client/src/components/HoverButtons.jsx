@@ -13,12 +13,15 @@ class HoverButtons extends React.Component {
       isVisible: false,
       isPlaying: false,
       isClicked: false,
+      isShowing: false,
     }
     this.handleMouseOver = this.handleMouseOver.bind(this);
     this.handleMouseExit = this.handleMouseExit.bind(this);
     this.playSong = this.playSong.bind(this);
     this.pauseSong = this.pauseSong.bind(this);
     this.stayVisible = this.stayVisible.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   handleMouseOver() {
@@ -43,6 +46,16 @@ class HoverButtons extends React.Component {
     this.setState({ isClicked: !this.state.isClicked });
   }
 
+  openModal() {
+    this.setState({ isShowing: true });
+  }
+
+  closeModal() {
+    this.setState({ isShowing: false });
+  }
+
+
+
   render() {
     const playing = this.state.isPlaying;
     let button;
@@ -58,13 +71,13 @@ class HoverButtons extends React.Component {
       <div className="hoverOverlay">
         {this.state.isVisible ?
           (
-          <div className="hoverArea" onMouseLeave={ this.state.isClicked ? () => {} : this.handleMouseExit }>
+          <div className="hoverArea" onMouseLeave={ this.state.isClicked || this.state.isShowing ? () => {} : this.handleMouseExit }>
             <div className="hoverContainer">
               <div className="mainHoverBtn">
                 {button}
               </div>
               <div className="optionalHoverBtn">
-                <HeartButton />
+                <HeartButton isShowing={this.state.isShowing} handleClose={this.closeModal} onClick={this.openModal} />
                 {/* <button className="optionalBtn" onClick={this.stayVisible}><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/heart.png" className="optionalIcon" /></button> */}
                 <MoreButton onClick={this.stayVisible}/>
               </div>
