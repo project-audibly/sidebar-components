@@ -3,6 +3,8 @@ import React from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './Links.css';
 
+import HeartButton from './HeartButton.jsx'
+
 function Links (props) {
   return (
     <div>
@@ -19,7 +21,6 @@ function Links (props) {
         <div className="languageOption">
           <span className="blue">Language:</span> English (US)
         </div>
-
       </div>
     </div>
   )
