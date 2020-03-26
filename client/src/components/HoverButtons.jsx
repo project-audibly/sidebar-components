@@ -1,6 +1,7 @@
 import React from 'react';
 import PlayButton from './PlayButton.jsx';
 import MoreButton from './MoreButton.jsx';
+import HeartButton from './HeartButton.jsx';
 
 import CSSModules from 'react-css-modules';
 import styles from './HoverButtons.css';
@@ -63,7 +64,8 @@ class HoverButtons extends React.Component {
                 {button}
               </div>
               <div className="optionalHoverBtn">
-                <button className="optionalBtn" onClick={this.stayVisible}><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/heart.png" className="optionalIcon" /></button>
+                <HeartButton />
+                {/* <button className="optionalBtn" onClick={this.stayVisible}><img src="https://audibly-sb-media.s3-us-west-1.amazonaws.com/icons/heart.png" className="optionalIcon" /></button> */}
                 <MoreButton onClick={this.stayVisible}/>
               </div>
             </div>
