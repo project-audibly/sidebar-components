@@ -21,9 +21,6 @@ function Links (props) {
         <div className="languageOption">
           <span className="blue">Language:</span> English (US)
         </div>
-
-        <HeartButton />
-
       </div>
     </div>
   )
