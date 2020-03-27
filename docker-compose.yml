@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+ database:
+   container_name: mongo
+   image: mongo:latest
+   ports:
+     - '27017:27017'
+
+ mongo-seed:
+   container_name: seed
+   build: .
+   command: 'npm run seed'
+   depends_on:
+     - 'database'
+
+ server:
+   container_name: server
+   build: .
+   depends_on:
+     - 'database'
+   ports:
+     - '3003:3003'
+
+
+
+
+  
