@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { relatedSongSchema, relatedPlaylistSchema, userFiller, songSchema } = require('../db/schema.js');
+const { relatedSongSchema, relatedPlaylistSchema, userFiller, songSchema } = require('./schema.js');
 const faker = require('faker');
 const db = require('./index.js');
 

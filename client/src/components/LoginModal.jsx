@@ -24,9 +24,9 @@ function LoginModal(props) {
                     <div className="separatorRight"></div>
                   </div>
                   <div className="loginContainer">
-                    <div className="loginForm">
+                    <div>
                       <form>
-                        <input type="text" placeholder="lol login if you can" />
+                        <input type="text" placeholder="lol login if you can" className="loginForm"/>
                       </form>
                     </div>
                     <button className="loginBtn">Continue PLEASE</button>
