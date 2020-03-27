@@ -21,8 +21,6 @@ services:
       - 'database'
     ports:
       - '3003:3003'
-    command: 'npm run server-dev'
-
 
 
 
